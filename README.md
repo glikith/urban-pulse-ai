@@ -2,8 +2,6 @@
 
 A decentralized, agentic system for explainable, real-time emergency vehicle routing in West Hyderabad. UrbanPulse AI combines classical graph algorithms (Yen's k-shortest-paths) with a local, offline multi-agent LLM pipeline (CrewAI + Ollama/Qwen) to generate congestion- and roadblock-aware routes for ambulances, accompanied by natural-language explanations for dispatchers and drivers.
 
-Built for a hackathon/academic project at KL University, Hyderabad.
-
 ---
 
 ## Table of Contents
