@@ -1,0 +1,134 @@
+# =============================================================================
+# UrbanPulse AI — Root .gitignore
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# OS & System Artifacts
+# -----------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# -----------------------------------------------------------------------------
+# IDEs & Editors
+# -----------------------------------------------------------------------------
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+# VS Code (ignore workspace state, retain team launch/task configurations)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Eclipse / Spring Tool Suite (STS)
+spring-backend/.classpath
+spring-backend/.project
+spring-backend/.settings/
+
+# -----------------------------------------------------------------------------
+# Environment & Secrets
+# -----------------------------------------------------------------------------
+*.env
+*.env.*
+!.env.example
+*.pem
+*.key
+
+# -----------------------------------------------------------------------------
+# General Logs & Cache
+# -----------------------------------------------------------------------------
+*.log
+logs/
+
+# -----------------------------------------------------------------------------
+# Frontend (Vite / React / Node)
+# -----------------------------------------------------------------------------
+frontend/node_modules/
+node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/build/
+dist/
+build/
+.vite/
+*.local
+frontend/.eslintcache
+frontend/*.tsbuildinfo
+frontend/.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# -----------------------------------------------------------------------------
+# Python Services (python-ai-engine & traffic-simulator)
+# -----------------------------------------------------------------------------
+# Virtual environments
+**/.venv/
+**/venv/
+**/env/
+**/ENV/
+env.bak/
+venv.bak/
+
+# Bytecode & module cache
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+*.so
+.Python
+*.egg-info/
+.installed.cfg
+*.egg
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Linters, tests, and profilers
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Application runtime cache & generated decision logs
+**/cache/
+python-ai-engine/route_decisions.log
+
+# -----------------------------------------------------------------------------
+# Map Data & Spatial Graphs (OSM / OSMnx / Platform Binaries)
+# -----------------------------------------------------------------------------
+# Large spatial datasets and generated network graphs
+python-ai-engine/data/*.osm
+python-ai-engine/data/*.osm.pbf
+python-ai-engine/data/*.osm.xz
+*.graphml
+
+# Platform-specific binaries
+**/osmconvert64.exe
+**/osmconvert*.exe
+
+# -----------------------------------------------------------------------------
+# Backend (Java / Spring Boot / Maven)
+# -----------------------------------------------------------------------------
+spring-backend/target/
+target/
+*.class
+*.jar
+*.war
+*.ear
+!.mvn/wrapper/maven-wrapper.jar
+!spring-backend/.mvn/wrapper/maven-wrapper.jar
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.properties.bak
+
+# -----------------------------------------------------------------------------
+# Apache Kafka (Local Binaries, Data, & Raft/KRaft Logs)
+# -----------------------------------------------------------------------------
+# Completely ignore the extracted binary distribution folder
+kafka/
+
+# Fallback patterns in case Kafka is executed locally outside kafka/
+kafka-logs/
+kraft-combined-logs/
